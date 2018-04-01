@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		
 	</head>
 	<body class="landing">
 
@@ -36,7 +37,7 @@
 				<h2>Hey Guys! There!</h2>
 				<p>You're Stuck in Heavy Fog, try leaving immediately</p>
 				<ul class="actions">
-					<li><a href="#" class="button big special">I'm Leaving Now</a></li>
+					<li><a id="randomButton" href="#" class="button big special">I'm Leaving Now</a></li>
 				</ul>
 			</section>
 
@@ -107,6 +108,15 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-
+			<script type="text/javascript">
+				window.onload = function(){
+					var button = document.getElementById('randomButton')[0];
+					if(Math.ceil(Math.random()*100) % 2 == 0) {
+						button.setAttribute('href', 'http://ghost.garenfeather.cn')
+					} else {
+						button.setAttribute('href', 'https://blog.garenfeather.cn')
+					}
+				}
+		</script>
 	</body>
 </html>
